@@ -1,22 +1,39 @@
-import React, { Component } from 'react'
+import React from 'react'
 import Header from '../Header'
+import NameCat from '../Restaurant/NameCat/'
+import './Detail.css'
 
-class Detail extends Component {
-  render() {
-    const { restaurant } = this.props
-
-    return (
-      <div className="detailContainer">
-        <Header showBackIcon />
-        <div>Gmap...</div>
-        <div>
-          <div>{restaurant.name}</div>
-          <div>{restaurant.category}</div>
-        </div>
-        <div />
+const Detail = ({ restaurant, closeDrawer }) => {
+  return (
+    <div className="detailContainer">
+      <Header showBackIcon closeDrawer={closeDrawer} />
+      <div style={{ backgroundColor: 'orange', height: '180px', width: '100%', marginTop: '12vh' }}>
+        Gmap...
       </div>
-    )
-  }
+      <div className="restInfoContainer">
+        <div className="restNameCat">
+          <NameCat restaurant={restaurant} />
+        </div>
+        <div className="restContact">
+          <div className="restAddr">{restaurant.location.address}</div>
+          <div>
+            {`${restaurant.location.city}, ${restaurant.location.state} ${restaurant.location
+              .postalCode
+              ? restaurant.location.postalCode
+              : ''}`}
+          </div>
+          {restaurant.contact &&
+            restaurant.contact.formattedPhone && (
+              <div className="restPhoneTwitter">{restaurant.contact.formattedPhone}</div>
+            )}
+          {restaurant.contact &&
+            restaurant.contact.twitter && (
+              <div className="restPhoneTwitter">{`@${restaurant.contact.twitter}`}</div>
+            )}
+        </div>
+      </div>
+    </div>
+  )
 }
 
 export default Detail

@@ -4,6 +4,12 @@
   position: fixed;
   top: 0;
   width: 100%;
+  /* display: inline-block; */
+  /* display: flex;
+  justify-content: center; */
+}
+.backIcon {
+  cursor: pointer;
 }
 .headerText {
   color: #ffffff;
@@ -13,6 +19,6 @@
   text-align: center;
 }
 .mapIcon {
-  float: right;
-  margin-right: 8vw;
+  /* float: right;
+  margin-right: 8vw; */
 }

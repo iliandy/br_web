@@ -1,0 +1,26 @@
+.detailContainer {
+  width: 90vw;
+}
+.restInfoContainer {
+  font-family: 'Avenir Next';
+}
+.restNameCat {
+  background-color: #34b379;
+  padding: 12px;
+  color: #ffffff;
+  height: 60px;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+.restContact {
+  padding: 0 12px;
+  color: #2a2a2a;
+  font-size: 16px;
+}
+.restAddr {
+  margin-top: 16px;
+}
+.restPhoneTwitter {
+  margin-top: 26px;
+}

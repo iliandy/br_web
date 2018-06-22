@@ -3,13 +3,12 @@
   background-repeat: no-repeat;
   background-size: cover;
   color: #ffffff;
+  cursor: pointer;
   font-family: 'Avenir Next';
   height: 180px;
   padding: 6px 12px;
-  /* position: relative; */
   width: 100%;
-}
-.restInfo {
-  /* bottom: 6px;
-  position: absolute; */
+  display: flex;
+  justify-content: flex-end;
+  flex-direction: column;
 }

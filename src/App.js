@@ -1,9 +1,14 @@
 import axios from 'axios'
+import { isEmpty } from 'ramda'
+import Drawer from '@material-ui/core/Drawer'
 import React, { Component } from 'react'
+import Detail from './components/Detail'
 import List from './components/List'
 
 class App extends Component {
   state = {
+    drawerOpen: false,
+    restaurant: {},
     restaurants: [],
   }
 
@@ -19,10 +24,28 @@ class App extends Component {
       })
   }
 
+  closeDrawer = () => {
+    this.setState({ drawerOpen: false })
+  }
+
+  selectedRest = rest => {
+    this.setState({
+      drawerOpen: true,
+      restaurant: rest,
+    })
+  }
+
   render() {
+    const { drawerOpen, restaurant, restaurants } = this.state
+
     return (
       <div>
-        <List {...this.state} />
+        <List restaurants={restaurants} selectedRest={this.selectedRest} />
+        {!isEmpty(restaurant) && (
+          <Drawer anchor="right" open={drawerOpen} onClose={this.closeDrawer}>
+            <Detail restaurant={restaurant} closeDrawer={this.closeDrawer} />
+          </Drawer>
+        )}
       </div>
     )
   }

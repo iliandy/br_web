@@ -7,7 +7,7 @@ import './List.css'
 
 class List extends Component {
   render() {
-    const { restaurants } = this.props
+    const { restaurants, selectedRest } = this.props
 
     if (isEmpty(restaurants)) {
       return <CircularProgress />
@@ -18,7 +18,13 @@ class List extends Component {
         <Header showBackIcon={false} />
         <div className="restaurants">
           {restaurants.map(restaurant => {
-            return <Restaurant key={restaurant.name} restaurant={restaurant} />
+            return (
+              <Restaurant
+                key={restaurant.name}
+                restaurant={restaurant}
+                selectedRest={selectedRest}
+              />
+            )
           })}
         </div>
       </div>
