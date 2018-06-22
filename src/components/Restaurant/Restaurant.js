@@ -1,5 +1,5 @@
 import React from 'react'
-import NameCat from './NameCat'
+import NameCat from '../NameCat'
 import './Restaurant.css'
 
 const Restaurant = ({ restaurant, selectedRest }) => (

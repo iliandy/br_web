@@ -1,15 +1,14 @@
 import React from 'react'
 import Header from '../Header'
-import NameCat from '../Restaurant/NameCat/'
+import NameCat from '../NameCat/'
+import GoogleMap from '../GoogleMap'
 import './Detail.css'
 
 const Detail = ({ restaurant, closeDrawer }) => {
   return (
     <div className="detailContainer">
       <Header showBackIcon closeDrawer={closeDrawer} />
-      <div style={{ backgroundColor: 'orange', height: '180px', width: '100%', marginTop: '12vh' }}>
-        Gmap...
-      </div>
+      <GoogleMap restaurant={restaurant} />
       <div className="restInfoContainer">
         <div className="restNameCat">
           <NameCat restaurant={restaurant} />
