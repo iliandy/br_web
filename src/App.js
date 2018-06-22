@@ -3,20 +3,18 @@ import React, { Component } from 'react'
 import List from './components/List'
 
 class App extends Component {
-  constructor(props) {
-    super(props)
-    this.state = {
-      restaurants: [],
-    }
+  state = {
+    restaurants: [],
   }
 
   componentDidMount() {
-    axios.get('https://s3.amazonaws.com/br-codingexams/restaurants.json')
-      .then((res) => {
+    axios
+      .get('https://s3.amazonaws.com/br-codingexams/restaurants.json')
+      .then(res => {
         const restaurants = res.data.restaurants
         this.setState({ restaurants })
       })
-      .catch((err) => {
+      .catch(err => {
         console.error(err)
       })
   }

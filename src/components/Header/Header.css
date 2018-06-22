@@ -1,0 +1,18 @@
+.header {
+  background: #43e895;
+  height: 12vh;
+  position: fixed;
+  top: 0;
+  width: 100%;
+}
+.headerText {
+  color: #ffffff;
+  font-size: 17px;
+  font-family: 'Avenir Next';
+  font-weight: 600;
+  text-align: center;
+}
+.mapIcon {
+  float: right;
+  margin-right: 8vw;
+}
