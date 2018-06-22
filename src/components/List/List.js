@@ -10,7 +10,11 @@ class List extends Component {
     const { restaurants, selectedRest } = this.props
 
     if (isEmpty(restaurants)) {
-      return <CircularProgress />
+      return (
+        <div className="loader">
+          <CircularProgress />
+        </div>
+      )
     }
 
     return (

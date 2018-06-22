@@ -10,7 +10,9 @@ const Restaurant = ({ restaurant, selectedRest }) => (
       backgroundImage: `url('/img/cellGradientBackground@2x.png'), url(${restaurant.backgroundImageURL})`,
     }}
   >
-    <NameCat restaurant={restaurant} />
+    <div className="restInfo">
+      <NameCat restaurant={restaurant} />
+    </div>
   </div>
 )
 
