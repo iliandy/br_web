@@ -12,7 +12,6 @@
 
 @media only screen and (min-width: 600px) {
   .restaurants {
-    margin-top: 10vh;
     display: flex;
     flex-wrap: wrap;
   }

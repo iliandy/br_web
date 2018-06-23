@@ -6,3 +6,12 @@
 .restCat {
   font-size: 12px;
 }
+
+@media only screen and (min-width: 600px) {
+  .restName {
+    font-size: 1.3rem;
+  }
+  .restCat {
+    font-size: 1rem;
+  }
+}
