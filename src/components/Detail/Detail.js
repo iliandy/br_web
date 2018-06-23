@@ -1,7 +1,7 @@
 import React from 'react'
 import Header from '../Header'
-import NameCat from '../NameCat/'
 import GoogleMap from '../GoogleMap'
+import NameCat from '../NameCat/'
 import './Detail.css'
 
 const Detail = ({ restaurant, closeDrawer }) => {

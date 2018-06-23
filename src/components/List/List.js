@@ -1,6 +1,6 @@
-import React, { Component } from 'react'
 import { isEmpty } from 'ramda'
 import CircularProgress from '@material-ui/core/CircularProgress'
+import React, { Component } from 'react'
 import Header from '../Header'
 import Restaurant from '../Restaurant'
 import './List.css'

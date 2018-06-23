@@ -1,5 +1,4 @@
 import axios from 'axios'
-import { isEmpty } from 'ramda'
 import Drawer from '@material-ui/core/Drawer'
 import React, { Component } from 'react'
 import Detail from './components/Detail'
@@ -41,11 +40,9 @@ class App extends Component {
     return (
       <div>
         <List restaurants={restaurants} selectedRest={this.selectedRest} />
-        {!isEmpty(restaurant) && (
-          <Drawer anchor="right" open={drawerOpen} onClose={this.closeDrawer}>
-            <Detail restaurant={restaurant} closeDrawer={this.closeDrawer} />
-          </Drawer>
-        )}
+        <Drawer anchor="right" open={drawerOpen} onClose={this.closeDrawer}>
+          <Detail restaurant={restaurant} closeDrawer={this.closeDrawer} />
+        </Drawer>
       </div>
     )
   }
