@@ -12,7 +12,7 @@ class GoogleMap extends Component {
     const restLatLng = { lat, lng }
 
     const map = new window.google.maps.Map(this.refs.map, {
-      zoom: 13,
+      zoom: 14,
       center: restLatLng,
     })
     const brMarker = new window.google.maps.Marker({
